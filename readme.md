@@ -5,10 +5,10 @@ An approach to enable multi model authentication, which means that from a derive
 The usage is relatively easy and basically means to active the correct Service Provider and setup the _base model_.
 
 ### Activation
-
+In `config/app.php` setup up the `\SebWas\MultiModelAuthentication\AuthServiceProvider` instead of the default one, and also setup the right alias of `Auth => SebWas\MultiModelAuthentication\Facades\Auth::class`.
 
 ### Model
-All models derived that should be user have to implement the `SebWas\MultiModelAuthentication\ConsumingModel` interface to set everything up. You can also use the `SebWas\MultiModelAuthentication\ConsumesModel` trait which gives you some handy functionality as well.
+All models derived that should be user have to implement the `\SebWas\MultiModelAuthentication\ConsumingModel` interface to set everything up. You can also use the `\SebWas\MultiModelAuthentication\ConsumesModel` trait which gives you some handy functionality as well.
 
 The model under `$this->app['config']['auth.model']` must implement the `\SebWas\MultiModelAuthentication\ProvidingModel` interface, which makes it obligatory to have the method `modelColumn()` defined which is supposed to tell the driver which column of the DB to use to get the right model.
 
