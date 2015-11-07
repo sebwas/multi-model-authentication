@@ -1,5 +1,5 @@
 {
-	"name": "sebwas/multimodelauthentication",
+	"name": "sebwas/multi-model-authentication",
 	"description": "An alteration of the authentication methods by laravel to support multi model authentication",
 	"keywords": ["laravel", "model", "authentication"],
 	"license": "MIT",
@@ -7,8 +7,8 @@
 		"illuminate/auth": "5.1.*"
 	},
 	"autoload": {
-        "psr-4": {
-            "SebWas\\MultiModelAuthentication\\": "src/sebwas/multimodelauthentication/"
-        }
+		"psr-4": {
+			"SebWas\\MultiModelAuthentication\\": "src/SebWas/MultiModelAuthentication/"
+		}
 	}
 }
