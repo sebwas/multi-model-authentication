@@ -67,7 +67,7 @@ class MultiModelUserProvider extends \Illuminate\Auth\EloquentUserProvider {
 
 		if($model instanceof ProvidingModel){
 			$newModelName = $model->{$model->modelColumn()};
-			$newModel = '\\App\\'.ucwords($newModelName)
+			$newModel = '\\App\\'.ucwords($newModelName);
 
 			if($model instanceof ProvidingModelAndAlias){
 				$aliases = $model->modelAlias();
@@ -88,7 +88,7 @@ class MultiModelUserProvider extends \Illuminate\Auth\EloquentUserProvider {
 			throw new Exception("The new model must implement \SebWas\MultiModelAuthentication\ConsumingModel");
 		}
 
-		$newModel->consume($model);
+		$newModel->consumeModel($model);
 
 		return $newModel;
 	}

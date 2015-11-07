@@ -3,6 +3,7 @@
 namespace SebWas\MultiModelAuthentication;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 trait ConsumesModel {
 	/**
