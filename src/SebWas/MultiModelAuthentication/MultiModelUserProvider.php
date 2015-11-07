@@ -4,7 +4,7 @@ namespace SebWas\MultiModelAuthentication;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MultiModelUserProvider extends Illuminate\Auth\EloquentUserProvider {
+class MultiModelUserProvider extends \Illuminate\Auth\EloquentUserProvider {
 	/**
 	 * Retrieve a user by their unique identifier.
 	 *

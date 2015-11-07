@@ -5,7 +5,7 @@ namespace SebWas\MultiModelAuthentication;
 /**
  * This class only overwrites setting up the AuthManager, using the one provided by this package
  */
-class AuthServiceProvider extends Illuminate\Auth\AuthServiceProvider {
+class AuthServiceProvider extends \Illuminate\Auth\AuthServiceProvider {
     /**
      * Register the authenticator services.
      *

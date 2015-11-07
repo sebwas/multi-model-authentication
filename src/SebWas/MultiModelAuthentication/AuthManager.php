@@ -5,7 +5,7 @@ namespace SebWas\MultiModelAuthentication;
 /**
  * This class only overwrites setting up the EloquentUserProvider, using the one provided by this package
  */
-class AuthManager extends Illuminate\Auth\AuthManager {
+class AuthManager extends \Illuminate\Auth\AuthManager {
     /**
      * Create an instance of the Eloquent user provider.
      *
@@ -15,6 +15,6 @@ class AuthManager extends Illuminate\Auth\AuthManager {
     {
         $baseModel = $this->app['config']['auth.model'];
 
-        return new EloquentUserProvider($this->app['hash'], $baseModel);
+        return new MultiModelUserProvider($this->app['hash'], $baseModel);
     }
 }
